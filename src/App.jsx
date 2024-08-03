@@ -1,9 +1,8 @@
-
 import "./App.css";
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
-import Counter from './components/Counter';
+import Rgb from './components/Rgb';
 
 export default function App() {
   return (
@@ -22,9 +21,9 @@ export default function App() {
             <li>
               <Link 
                 className="text-white text-lg hover:bg-white hover:text-slate-950 px-3 py-4 rounded-md" 
-                to="/counter"
+                to="/rgb"
               >
-                Counter
+                Color Context
               </Link>
             </li>
           </ul>
@@ -32,34 +31,10 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/counter" element={<Counter />} />
+            <Route path="/rgb" element={<Rgb />} />
           </Routes>
         </main>
       </div>
     </Router>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
